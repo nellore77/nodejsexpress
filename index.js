@@ -10,7 +10,7 @@ app.listen(PORT, () => {
 });
 
 let notes = [
-  { id: "1", content: "HTML is easy", important: true },
+  { id: "1", content: "HTML -----> is easy", important: true },
   { id: "2", content: "Browser can execute only JavaScript", important: false },
   {
     id: "3",
@@ -20,6 +20,8 @@ let notes = [
 ];
 
 app.use(express.json()); // accept data coming in json format
+
+app.use(express.static("dist")); //make Express show static content
 
 app.use(cors()); //allow for requests from all origins
 
